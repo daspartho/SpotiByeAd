@@ -98,8 +98,10 @@ If you'd like to build for Mac / Linux, do the following:
 2. To build a proper package, run `python setup.py py2app`. 
 
 ## Any major platform
-You'll need Python 3 with the `PyInstaller` package installed. The run the following command in a terminal from the project directory.
+You'll need Python 3 with the `PyInstaller` package installed. The run the following command in a terminal _from the project directory_.
 ```
-pyinstaller --onefile --collect-submodules pynput -c -n SpotiByeAds main.py
+pyinstaller --onefile --collect-submodules pynput --collect-submodules spotipy --collect-submodules py2app -c -n SpotiByeAds main.py
 ```
 If succesful, then check for the executable file in the `dist/` directory created.
+Then, drag the executable into the SpotiByeAds directory (this allows for credential recall).
+Finally, create a shortcut and enjoy!
